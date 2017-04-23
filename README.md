@@ -50,9 +50,9 @@ Main of the-compontents
 <!-- Sections Start -->
 <a name="sections"></a>
 
-<!-- Section from "docs/guides/01.Installation.md.hbs" Start -->
+<!-- Section from "doc/guides/01.Installation.md.hbs" Start -->
 
-<a name="section-docs-guides-01-installation-md"></a>
+<a name="section-doc-guides-01-installation-md"></a>
 
 Installation
 -----
@@ -62,11 +62,11 @@ $ npm install the-main --save
 ```
 
 
-<!-- Section from "docs/guides/01.Installation.md.hbs" End -->
+<!-- Section from "doc/guides/01.Installation.md.hbs" End -->
 
-<!-- Section from "docs/guides/02.Usage.md.hbs" Start -->
+<!-- Section from "doc/guides/02.Usage.md.hbs" Start -->
 
-<a name="section-docs-guides-02-usage-md"></a>
+<a name="section-doc-guides-02-usage-md"></a>
 
 Usage
 ---------
@@ -94,11 +94,11 @@ export default ExampleComponent
 ```
 
 
-<!-- Section from "docs/guides/02.Usage.md.hbs" End -->
+<!-- Section from "doc/guides/02.Usage.md.hbs" End -->
 
-<!-- Section from "docs/guides/03.Components.md.hbs" Start -->
+<!-- Section from "doc/guides/03.Components.md.hbs" Start -->
 
-<a name="section-docs-guides-03-components-md"></a>
+<a name="section-doc-guides-03-components-md"></a>
 
 Components
 -----------
@@ -116,7 +116,7 @@ Main of the-compontents
 | `id` | string  | DOM Id | `null` |
 
 
-<!-- Section from "docs/guides/03.Components.md.hbs" End -->
+<!-- Section from "doc/guides/03.Components.md.hbs" End -->
 
 
 <!-- Sections Start -->
