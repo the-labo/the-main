@@ -19,12 +19,12 @@ class TheMain extends React.PureComponent {
       children
     } = props
     return (
-      <div className={ classnames('the-main', className) }
+      <main className={ classnames('the-main', className) }
            style={ styles.root }
            { ...{ id }}
       >
         { children }
-      </div>
+      </main>
     )
   }
 
