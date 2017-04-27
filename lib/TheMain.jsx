@@ -3,61 +3,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import TheStyle from 'the-style'
+import TheMainStyle from './TheMainStyle'
+import { htmlAttributesFor } from 'the-component-util'
 
 /**
- * Main of the-compontents
+ * Main for the-components
  */
 class TheMain extends React.PureComponent {
   render () {
     const s = this
     const { props } = s
     let {
-      id,
       className,
-      styles,
       children
     } = props
     return (
-      <main className={ classnames('the-main', className) }
-           style={ styles.root }
-           { ...{ id }}
+      <div { ...htmlAttributesFor(props, { except: [ 'className' ] }) }
+           className={ classnames('the-main', className) }
       >
         { children }
-      </main>
+      </div>
     )
   }
-
-  /**
-   * Define style
-   * @param [options={}] options - Optional settings
-   * @returns {Object} Style object
-   */
-  static styles (options = {}) {
-    const { theme } = TheStyle
-    let {
-      dominant = theme.DOMINANT_COLOR
-    } = options
-    return {
-      root: {}
-    }
-  }
 }
 
-TheMain.propTypes = {
-  /** CSS class name */
-  className: PropTypes.string,
-  /** Style objects */
-  styles: PropTypes.object,
-  /** DOM Id */
-  id: PropTypes.string
-}
+TheMain.Style = TheMainStyle
 
-TheMain.defaultProps = {
-  className: null,
-  styles: TheMain.styles({}),
-  id: null
-}
+TheMain.propTypes = {}
+
+TheMain.defaultProps = {}
 
 TheMain.displayName = 'TheMain'
 
