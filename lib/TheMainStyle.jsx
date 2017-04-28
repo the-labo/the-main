@@ -8,7 +8,7 @@ import TheStyle from 'the-style'
 /** Style for TheMain */
 const TheMainStyle = ({ id, className, options }) => (
   <TheStyle { ...{ id } }
-            className={ classnames('te-body-style', className) }
+            className={ classnames('te-main-style', className) }
             styles={ TheMainStyle.data(options) }
   />
 )
