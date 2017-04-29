@@ -24,9 +24,9 @@ TheMainStyle.defaultProps = {
 }
 
 TheMainStyle.data = (options) => {
-  const { theme } = TheStyle
+  const { ThemeValues } = TheStyle
   let {
-    dominantColor = theme.DOMINANT_COLOR
+    dominantColor = ThemeValues.dominantColor
   } = options
   return {
     '.the-main': {}
