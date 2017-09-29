@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import c from 'classnames'
 import TheMainStyle from './TheMainStyle'
 import { htmlAttributesFor } from 'the-component-util'
 
@@ -12,16 +12,16 @@ import { htmlAttributesFor } from 'the-component-util'
 class TheMain extends React.PureComponent {
   render () {
     const s = this
-    const { props } = s
-    let {
+    const {props} = s
+    const {
       className,
       children
     } = props
     return (
-      <div { ...htmlAttributesFor(props, { except: [ 'className' ] }) }
-           className={ classnames('the-main', className) }
+      <div {...htmlAttributesFor(props, {except: ['className']})}
+           className={c('the-main', className)}
       >
-        { children }
+        {children}
       </div>
     )
   }
