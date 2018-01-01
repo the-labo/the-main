@@ -32,7 +32,7 @@ TheMainStyle.data = (options) => {
   return asStyleData('.the-main', {
     '&': {
       'width': '100%',
-      'flex-grow': 1
+      'flexGrow': 1
     }
   })
 }
