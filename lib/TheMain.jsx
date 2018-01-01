@@ -18,11 +18,11 @@ class TheMain extends React.PureComponent {
       children
     } = props
     return (
-      <div {...htmlAttributesFor(props, {except: ['className']})}
+      <main {...htmlAttributesFor(props, {except: ['className']})}
            className={c('the-main', className)}
       >
         {children}
-      </div>
+      </main>
     )
   }
 }
