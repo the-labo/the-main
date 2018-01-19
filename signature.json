@@ -2,7 +2,20 @@
   "TheMain": {
     "description": "Main for the-components",
     "displayName": "TheMain",
-    "methods": []
+    "methods": [],
+    "props": {
+      "spinning": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Show spinner",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      }
+    }
   },
   "TheMainStyle": {
     "description": "Style for TheMain",

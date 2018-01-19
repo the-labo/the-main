@@ -4,23 +4,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import c from 'classnames'
 import TheMainStyle from './TheMainStyle'
+import { TheSpin } from 'the-spin'
 import { htmlAttributesFor } from 'the-component-util'
 
 /**
  * Main for the-components
  */
-class TheMain extends React.PureComponent {
+class TheMain extends React.Component {
   render () {
-    const s = this
-    const {props} = s
+    const {props} = this
     const {
       className,
-      children
+      children,
+      spinning,
     } = props
     return (
       <main {...htmlAttributesFor(props, {except: ['className']})}
-           className={c('the-main', className)}
+            className={c('the-main', className)}
       >
+        <TheSpin cover
+                 enabled={spinning}
+                 size={'x-large'}
+        />
         {children}
       </main>
     )
@@ -29,9 +34,14 @@ class TheMain extends React.PureComponent {
 
 TheMain.Style = TheMainStyle
 
-TheMain.propTypes = {}
+TheMain.propTypes = {
+  /** Show spinner */
+  spinning: PropTypes.bool
+}
 
-TheMain.defaultProps = {}
+TheMain.defaultProps = {
+  spinning: false
+}
 
 TheMain.displayName = 'TheMain'
 

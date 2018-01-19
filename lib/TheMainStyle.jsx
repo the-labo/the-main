@@ -9,7 +9,7 @@ import { asStyleData } from 'the-component-util'
 /** Style for TheMain */
 const TheMainStyle = ({id, className, options}) => (
   <TheStyle {...{id}}
-            className={classnames('te-main-style', className)}
+            className={classnames('the-main-style', className)}
             styles={TheMainStyle.data(options)}
   />
 )
@@ -31,8 +31,8 @@ TheMainStyle.data = (options) => {
   } = options
   return asStyleData('.the-main', {
     '&': {
-      'width': '100%',
-      'flexGrow': 1
+      width: '100%',
+      flexGrow: 1
     }
   })
 }

@@ -111,6 +111,7 @@ Main for the-components
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
+| `spinning` | bool  | Show spinner | `false` |
 ### TheMainStyle
 
 Style for TheMain
