@@ -22,10 +22,13 @@ class TheMain extends React.Component {
       <main {...htmlAttributesFor(props, {except: ['className']})}
             className={c('the-main', className)}
       >
-        <TheSpin cover
-                 enabled={spinning}
-                 size={'x-large'}
-        />
+        {spinning && (
+          <TheSpin cover
+                   enabled
+                   size={'x-large'}
+          />
+        )
+        }
         {children}
       </main>
     )
