@@ -1,11 +1,11 @@
 'use strict'
 
-import React from 'react'
-import PropTypes from 'prop-types'
 import c from 'classnames'
-import TheMainStyle from './TheMainStyle'
-import { TheSpin } from 'the-spin'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { htmlAttributesFor } from 'the-component-util'
+import { TheSpin } from 'the-spin'
+import TheMainStyle from './TheMainStyle'
 
 /**
  * Main for the-components
@@ -14,8 +14,8 @@ class TheMain extends React.Component {
   render () {
     const {props} = this
     const {
-      className,
       children,
+      className,
       spinning,
     } = props
     return (
@@ -23,9 +23,10 @@ class TheMain extends React.Component {
             className={c('the-main', className)}
       >
         {spinning && (
-          <TheSpin cover
+          <TheSpin className='the-main-spin'
+                   cover
                    enabled
-                   size={'x-large'}
+                   size='xx-large'
           />
         )
         }
@@ -39,11 +40,11 @@ TheMain.Style = TheMainStyle
 
 TheMain.propTypes = {
   /** Show spinner */
-  spinning: PropTypes.bool
+  spinning: PropTypes.bool,
 }
 
 TheMain.defaultProps = {
-  spinning: false
+  spinning: false,
 }
 
 TheMain.displayName = 'TheMain'

@@ -1,13 +1,13 @@
 'use strict'
 
-import React from 'react'
-import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import TheStyle from 'the-style'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { asStyleData } from 'the-component-util'
+import TheStyle from 'the-style'
 
 /** Style for TheMain */
-const TheMainStyle = ({id, className, options}) => (
+const TheMainStyle = ({className, id, options}) => (
   <TheStyle {...{id}}
             className={classnames('the-main-style', className)}
             styles={TheMainStyle.data(options)}
@@ -17,23 +17,27 @@ const TheMainStyle = ({id, className, options}) => (
 TheMainStyle.displayName = 'TheMainStyle'
 TheMainStyle.propTypes = {
   /** Style options */
-  options: PropTypes.object
+  options: PropTypes.object,
 }
 
 TheMainStyle.defaultProps = {
-  options: {}
+  options: {},
 }
 
 TheMainStyle.data = (options) => {
   const {ThemeValues} = TheStyle
   const {
-    dominantColor = ThemeValues.dominantColor
+    dominantColor = ThemeValues.dominantColor,
   } = options
   return asStyleData('.the-main', {
+    '.the-main-spin.the-spinner-cover': {
+      background: 'rgba(255,255,255,0.98)',
+      zIndex: 12,
+    },
     '&': {
+      flexGrow: 1,
       width: '100%',
-      flexGrow: 1
-    }
+    },
   })
 }
 
