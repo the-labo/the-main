@@ -20,6 +20,7 @@ class TheMain extends React.Component {
     } = props
     return (
       <main {...htmlAttributesFor(props, {except: ['className']})}
+            aria-busy={spinning}
             className={c('the-main', className)}
       >
         {spinning && (
@@ -44,6 +45,7 @@ TheMain.propTypes = {
 }
 
 TheMain.defaultProps = {
+  role: 'main',
   spinning: false,
 }
 
