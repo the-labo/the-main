@@ -36,6 +36,7 @@ TheMainStyle.data = (options) => {
     },
     '&': {
       flexGrow: 1,
+      height: '100%',
       width: '100%',
     },
   })
