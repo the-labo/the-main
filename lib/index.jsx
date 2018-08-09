@@ -9,7 +9,6 @@ import TheMain from './TheMain'
 import TheMainStyle from './TheMainStyle'
 
 export {
-  TheMain,
-  TheMainStyle,
+ TheMain,
+ TheMainStyle,
 }
-
