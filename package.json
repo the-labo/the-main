@@ -14,7 +14,7 @@
     "classnames": "^2.2.6",
     "prop-types": "^15.6.2",
     "the-component-util": "^3.0.2",
-    "the-spin": "^3.1.7",
+    "the-spin": "^3.1.8",
     "the-style": "^2.2.0"
   },
   "devDependencies": {
