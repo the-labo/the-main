@@ -32,7 +32,7 @@ TheMainStyle.data = (options) => {
   return asStyleData('.the-main', {
     '.the-main-spin.the-spinner-cover': {
       background: 'rgba(255,255,255,0.98)',
-      zIndex: 12,
+      zIndex: 999,
     },
     '&': {
       flexGrow: 1,
